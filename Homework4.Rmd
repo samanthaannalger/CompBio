@@ -1,0 +1,42 @@
+---
+title: "Homework 4, Entering MetaData"
+author: "Samantha A. Alger"
+date: "2/8/2017"
+output: html_document
+---
+```
+#Entered Metadata into a excel file of Ross Conrad virus data and saved as a csv file. 
+
+# TITLE: Colony Virus Results for Apiary 125
+# DATE: 2016-11-02
+# AUTHOR: Samantha Alger
+# ------------------------------------------------
+# AUTHOR EMAIL: salger@uvm.edu
+# AUTHOR ADDRESS: 109 Carrigan Dr., Burlington, VT 05401"
+# AUTHOR WEBSITE: NA
+# ------------------------------------------------
+# OWNERSHIP: Samantha Alger
+# COLLABORATORS: Alex Burnham, Ross Conrad"
+# FUNDING SOURCES: NA
+# REPOSITORY: GitHub, repo: AlgerProjects"
+# CITATIONS: NA
+# ------------------------------------------------
+# SAMPLING LOCATIONS: Apiary '125' (Ross Conrad's apiary)
+# SAMPLING TIMES: 2017-08-18
+# VARIABLE DESCRIPTION: Sample name is "RC"" for Ross Conrad and unique hive number. Target name is DWV (virus of interest), Ctmean, Ctsd, quantity mean, and quantity sd are from qPCR results. Run is the qPCR run #. dil. factor is the dilution of RNA used in PCR. genome copies is the target copies without reference gene. ACT genome copies is the reference genome copy number, norm genome copy is the normalized copies of DWV in each bee sample. Colony number is the unique ID given to each colony tested.
+# MISSING DATA: Hive # 6 was not sampled
+```
+
+
+```{r}
+#Read in data
+RC <- read.table("RossConradDF_Metadata_Exercise.csv", header=TRUE, sep = ",", stringsAsFactors = F)
+
+str(RC)
+summary(RC)
+table(RC$sample_name)
+head(RC)
+tail(RC)
+
+
+```

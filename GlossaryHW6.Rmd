@@ -1,0 +1,277 @@
+---
+title: "HW6Glossary"
+author: "Samantha A. Alger"
+date: "2/22/2017"
+output: html_document
+---
+
+### `floor`
+#### Samantha Alger
+
+Floor(x) rounds *down* a given number (x) to an integer.
+```{r}
+floor(2.76) # the function rounds down 2.76 to the value '2'
+
+floor(-3.456) # the function rounds down -3.456 to the value '-4'
+
+```
+
+### `unlist`
+#### Samantha Alger
+
+unlist transforms a list structure into a vector.
+
+```{r}
+# setting up a list
+myList <- list(1:30,matrix(1:12,nrow=4,byrow=TRUE),
+               LETTERS[1:5])
+# view the list
+print(myList)
+
+# using the unlist function
+# output produces a vector containing all atomic components of the list
+unlist(myList)
+
+```
+
+### `cat`
+#### Samantha Alger
+Print output to the screen or to a file. Use 'cat' instead of 'print' to print information from a function.
+cat(..., file "", sep="",append=FALSE)
+
+  * ... -The information to be printed to the screen or saved file
+  
+  * file- Specifies a file to be created (this is optional)
+  
+  * sep -Specifies what separates the objects in...that are to be printed.
+  
+  * append -If a file is specified, then indicate whether to append to the content in the existing file (the default is not to append, which means to overwrite the existing content).
+  
+```{r}
+
+x <- c(1:10)
+print(x)
+
+# Space separator
+cat(x)
+
+# Multi-space separator, and adds a period between each number
+cat(x, sep=" . ")
+
+# Separates each number by a tab
+cat(x, sep="\t")
+
+# Separates each number by a line break
+cat(x, sep="\n")
+
+# Use cat to index particular values
+# and specify how those values will be printed using sep
+
+# creating a data set (y) of 10 random atomic components of either red or blue
+y <- sample(c("red", "blue"), 10, TRUE)
+y
+
+# use cat to concatenate and print the two atomic components x and y
+cat(x, y)
+
+#use cat to specify which values to print (first value of each vector) and separate those two values by a tab.
+cat(x[1], y[1], sep="\t")
+```
+
+
+### `rev`
+#### Samantha Alger
+rev() reverses an R object, including vector, array, etc.
+
+```{r}
+# First create a vector
+x <- c("red","orange","blue")
+
+#check it out
+print(x)
+
+#now reverse the order of the vector and print
+rev(x)
+```
+
+
+### `cumprod`
+#### Samantha Alger
+
+cumprod() returns a vector with elements that are the cumulative products
+```{r}
+# create a vector consisting of 3 elements
+x <-c(3,5,10)
+
+# cumprod(x) will find the cumulative products
+cumprod(x)
+
+# the cumprod() function is doing the following calculations:
+3 * 1
+3 * 5
+3*5*10
+```
+
+
+### `write.csv`
+#### Samantha Alger
+write.csv() is used to write data to a csv file
+
+```{r}
+# a sample data frame
+
+A <- 1:16
+B <- rep(c("red","blue","green","NA"), each =4)
+C <-runif(16)
+data <- data.frame(A,B,C,stringsAsFactors = FALSE)
+
+# write to a file, without row names
+write.csv(data, "data.csv")
+
+# same, except without row names
+write.csv(data, "data.csv", row.names = FALSE)
+
+# same, except of "NA", return blank cell
+write.csv(data, "data.csv", row.names = FALSE, na = "")
+
+#check out the csv file created.
+read.csv("data.csv")
+```
+
+
+### `rep_len`
+#### Samantha Alger
+
+rep_len() replicates values for a desired length ("len")
+```{r}
+# the following code will repeat the three bird types 20 times
+rep_len(c("finch","thrush","warbler"),20)
+
+```
+
+
+### `read.delim`
+#### Samantha Alger
+
+read.delim() is used to read in delimited text files, where data is organized in a data matrix with rows representing cases and columns representing variables.
+read.delim(file,header=TRUE,sep="\t")
+
+* file -A file location
+
+* header - Whether the first line describes the column names
+
+* sep - The table delimiter, often a tab (\t) or comma
+
+
+```{r}
+#The following is an example for how you would read in a .txt file.
+#It is commented out since the .txt file does not exist
+
+#d <-read.delim("annual.txt", header= TRUE, sep="\t")
+
+```
+
+### `all.equal`
+#### Samantha Alger
+
+all.equal(target,current) will check if two objects are equal, or nearly equal.
+
+* target-An R object
+* current- A second R object to compare to target (the first argument)
+
+Output will give the difference betwen the objects or will return TRUE if the values are sufficiently close enough
+
+```{r}
+all.equal(pi, 3.14)
+
+all.equal(pi, 3.1415)
+
+all.equal(pi, 3.141592)
+
+all.equal(pi, 3.14159265)
+
+
+```
+### `sample`
+#### Samantha Alger
+
+sample() will take a random sample of a specified size. You can specify whether to sample with or without replacement.
+
+sample(x, size, replace =FALSE)
+
+* x - object to be sampled
+* size - size of the sample
+* replace - should sampling be with replacement?
+
+```{r}
+#create an object to sample
+x <- runif(1:10)
+
+# take a sample of 100 from x
+# without replacement (we will never find duplicates)
+sample(x, 4, replace = FALSE)
+
+# if you sample with replacement, you can sample at a size larger than the original object
+#in this case, there will be numbers repeated
+sample(x, 11, replace = TRUE)
+
+```
+### `setequal`
+#### Samantha Alger
+setequal() tests if two vectors are equal. The function will return a logical response: (TRUE or FALSE). 
+
+```{r}
+#create two different vectors using the sample function that will randomly sample 10 numbers from 1 to 100.
+x <- sample(1:100, size=10)
+y <- sample(1:100, size=10)
+
+#use setequal to check if the two vectors are the same. since we are using the sample function, we are randomly sampling and so the two vectors will be different. setequal returns a FALSE value. 
+setequal(x,y)
+
+#another example:
+birds <- rep_len(c("finch","thrush","warbler"),20)
+birds2 <- rep_len(c("NA","thrush","warbler"),20) 
+
+#using setequal returns a FALSE value because there is one value different
+setequal(birds,birds2)
+
+```
+### `[`
+#### Samantha Alger
+
+square brackets ('[') are used to reference or index a particular object within a vector, dataframe, or matrix. 
+```{r}
+# for vectors:
+# create a vector
+data = c(1,3,5,7,3,2)
+
+#Using brackets will return the third value of the vector
+data[3] 
+
+#for a given dataframes or matrices:
+# make a dataframe:
+A <- 1:16
+B <- rep(c("red","blue","green","NA"), each =4)
+C <-runif(16)
+data <- data.frame(A,B,C,stringsAsFactors = FALSE)
+
+#check out the dataframe
+print(data)
+
+# Using brackets, the first value specifies the row, the second value specifies the column
+#The following will return the value in the first row, second column of the dataframe:
+data[1,2]
+
+
+```
+
+### `which`
+#### Samantha Alger
+
+
+```{r}
+#For a given vector, which is the index of the 3rd non-NA value?
+x <- c(1,NA,2,NA,3)
+which(!is.na(x))[3]
+
+```

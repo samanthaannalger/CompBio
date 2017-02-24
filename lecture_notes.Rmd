@@ -1,0 +1,198 @@
+---
+title: "Lecture Notes"
+author: "Samantha Alger"
+date: "January 17, 2017"
+output:
+  html_document:
+    highlight: tango
+    theme: united
+  pdf_document: default
+  word_document:
+    keep_md: yes
+---
+
+###1/17/17
+#####Goals
+* think on paper
+* computational tools
+* core programming methods
+* speaking skills
+
+Lab- Wednesdays: 1-3:30
+
+##Git Hub
+
+Working locally on your computer, you will push or pull versions to and from GitHub. (push sync to do both). Then, you can ‘commit’ to create a version that you can later return to if needed. 
+
+If your code is not working, you can use the ‘Revert’ button and Git will send you back to the last commit (previous version of your code). 
+
+##Homework:
+####Send NG an email when done setting up your repository:
+
+* github webpage site
+* github repository
+* Fun Fact- something about me that is memorable
+
+##1/19/17
+
+###Thinking on Paper!!
+
+####Inductive method
+observation->hypothesis->prediciton->observation
+
+####Hypothesis-Deductive method
+Observation with multiple hypotheses and test predictions and refute predictions. 
+
+Very uncommon to see people progressing this way. Our starting viewpoint is instead, "Nature is complex". So we shy away from stating simple hypotheses and we see this is in the ecology literature. For example: "relative importance of factors x, y, and z". We don't usually see a quantification of the relative importance of these factors. But, we do see a "complex mix of biotic, abiotic, and historical factors". Another that is popping up is "context-dependent". Of course everything is context dependent. None of these get at a clear hypothesis. Nick calls this "Tangled Bank Fever". 
+
+We do not make good progress by embracing this complexity initially.
+
+####4 tools for 'thinking on paper'
+
+* path diagram (cause and effect flow chart)
+* logic tree
+* look up table or DIP switch
+* mock data
+
+##1-24-2017
+
+Plain-text files-WYSIWYW (what you see is what you want/need)
+WYSIWYG (what you see is what you get)
+
+####plain-text types:  
+  * LaTex- has thousands of typesetting commands, complex
+  * markdown- very simple version of LaTex (dozen commands instead of thousands of commands)
+  * Rmarkdown- we can mix in lines of R code and get it to run (filename.Rmd)
+         we can "*knit*" to make file: .pdf, .html, or .docx
+  
+  yaml- "yet another markdown language" at the top of the page (meta data information)
+  
+###to knit: use Cntrl + Shift + k
+
+##To learn markdown language-
+* Help ->Markdown Quick Reference!
+
+
+###First Markdown Trial
+
+
+This text has *italics*.
+
+This text is **bold**.
+
+#Header 1
+
+##Header 2
+
+##Header 3
+
+#####Header a million
+
+A friend once said:
+
+>It's always better to give
+>than to receive.
+
+These   words   are widely    spaced
+
+One line  
+Next line  
+Third line  
+
+
+lists are super easy!!!   
+
+* first item  
+* second item  
+     + what?!  
+     + double what?!  
+     
+Yo! let's use a link:  
+
+[Alex's website](http://stars2come.com/wp-content/uploads/2010/03/100_3841-300x225.jpg)^[yeah, he's kind of a big deal]
+
+Here he is in all of his glory...  
+![in all his glory](Burnham.jpg)
+
+footnote at the bottom of the page^[FOOTNOTE!]
+
+> quoted text is formatted this way
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+`plaintext` shows this way
+
+```
+All the text that we add in here will be exactly like plain text, and not converted to markdown language. Now I can     put      big     ol'     giant    spaces    
+
+```
+###Back to markdown formatting
+
+in line r code `r 3 + pi`
+
+
+##To automatically insert R chuck, Use command + alt + i:
+```{r}
+#Use comments profusely in your code!
+
+Time <- seq(1,10) #seq makes integer sequence
+print(Time)       #show contents
+Resp <- runif(10) #random uniform- create 10 random numbers froma uniform distribution
+print(Resp)
+plot(x=Time, y=Resp, type="b")
+```
+
+
+##Build an equation   
+###in line equation
+Put an equation (between dollar signs) $a = b + c$
+
+Set equation on its own line with this:   
+$$a = b + c$$
+
+##1-26-17
+
+###Subscripts in LaTex
+
+$$H_0 = Z_{a + b}$$
+
+In Markdown, we say H~0~
+
+Superscripts
+
+$$S = cA^z$$
+
+Combining elements
+
+$$S=cA^z_1 = z_{2 = x_0}$$
+
+Special symbols and fraction
+
+$$\alpha = \frac{\beta}{\gamma + \delta_x}$$
+
+Using the backslash
+
+$$\backslash \alpha \le b \backslash$$
+
+Summation sign
+
+$$z = \sum_{i=1}^X{K}$$
+
+Rendering plaintext in LaTex
+
+$$P(\mbox{Occurence Of Species A}) = Z$$
+
+
+```{r} 
+            #```{r, echo=FALSE} (removes the R code)
+            #eval=FALSE (keeps record of code it  will print, but will not run inside that chunk)
+plot(runif(20))
+print(seq(1,5))
+
+```
+
+
+##1/31/17

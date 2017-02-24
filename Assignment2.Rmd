@@ -1,0 +1,30 @@
+---
+title: "Assignment 2 Bio 381"
+author: "Samantha A. Alger"
+date: "1/25/2017"
+output: html_document
+---
+
+##Thinking on Paper...
+
+* ![DecisionTree1](DecisionTree1.JPG)   
+
+> Decision Tree # 1: Exploring how floral density on the landscape level influences prevalence of virus in bumble bees.
+
+
+* ![DecisionTree2](DecisionTree2.JPG)
+
+> Decision Tree #2: Exploring possible explanations for why viruses and plant species are interacting.
+
+
+* ![PathDiagram](PathDiagram.JPG)
+
+> Path Diagram: Exploring possible transmission routes and spillover between bumble bees, honey bees, and *Varroa* mites.
+
+* ![DipSwitch](DipSwitch.JPG)   
+
+> Dip Switch Diagram: Providing an explanation for the possible results for viral detection on flowers: (2 viruses, 2 plant species).
+
+* ![MockData](MockData.JPG)
+
+> Mock Data: Relationship between viral prevalence (%) in bumble bees and floral density. I predict virus prevalence to be positively correlated with floral density. 

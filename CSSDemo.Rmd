@@ -1,0 +1,9 @@
+---
+title: "Using another style sheet"
+author: "Samantha A. Alger"
+date: "1/31/2017"
+output: 
+  html_document: 
+    css: ~/Desktop/night.css
+    keep_md: yes
+---

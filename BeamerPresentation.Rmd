@@ -1,0 +1,220 @@
+---
+output:
+  beamer_presentation: 
+    colortheme: lily
+    incremental: yes
+---
+
+##
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+###Bee Virus Ecology
+
+Samantha Alger
+\begin{picture}(320,250)
+ \put(-15,90){\includegraphics[height=4cm]
+ {/Users/samanthaalger/ComputationalBiology/CompBio/Beamerfigs/Virions.png}}
+ \put(00,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+## Disease Ecology
+Study of interactions among wildlife hosts, vectors, pathogens, and their environment  
+- Prevalence?  
+- What influences disease spillover?  
+- When do outbreaks occur?  
+- How does the environment influence interactions between hosts and pathogens? 
+
+ 
+\begin{picture}(200,200)
+ \put(45,70){\includegraphics[height=4cm]
+ {/Users/samanthaalger/ComputationalBiology/CompBio/Beamerfigs/Disease_Ecology.png}}
+ \put(00,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+##
+\begin{picture}(200,200)
+ \put(-30,-35){\includegraphics[height=9cm]
+ {/Users/samanthaalger/ComputationalBiology/CompBio/Beamerfigs/Pollinators.png}}
+ \put(00,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+##
+\begin{picture}(200,200)
+ \put(10,-65){\includegraphics[height=9cm]
+ {/Users/samanthaalger/ComputationalBiology/CompBio/Beamerfigs/Bees.png}}
+ \put(00,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+ \begin{picture}(200,200)
+ \put(150,300){\includegraphics[height=3cm]
+ {/Users/samanthaalger/ComputationalBiology/CompBio/Beamerfigs/Nosema.png}}
+ \put(00,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+## Plant-Insect-Pathogen Interactions
+
+-Fire Blight - (Bacteria): Infects nectar secretion site in apples and pears, carried by bees  
+
+-Mummy berry disease - (Fungus): Infects blueberry stems and wilted leaves become ‘pseudoflowers’ that attract insect visitors with ‘nectar’, UV, and scent  
+
+-Crithidia & Nosema  spp. - (Trypanosome & Microsporidian): Infects bees through use of shared flowers, probably through feces, some plants may be better at harboring the diseases  
+
+##
+\begin{picture}(320,250)
+ \put(20,-10){\includegraphics[height=9cm]
+ {/Users/samanthaalger/ComputationalBiology/CompBio/Beamerfigs/affinis.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+##
+
+\begin{picture}(320,250)
+ \put(20,-10){\includegraphics[height=9cm]
+ {/Users/samanthaalger/ComputationalBiology/CompBio/Beamerfigs/viruses.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {Deformed Wing Virus (DWV)  
+
+
+
+
+Black Queen Cell Virus (BQCV)  
+
+
+
+
+Israeli Acute Paralysis Virus (IAPV) }
+ \end{minipage}}
+ \end{picture}
+##Deformed Wing Virus
+
+##Black Queen Cell Virus
+
+
+##Israeli Acute Paralysis Virus
+
+##Flow Diagram with pictures
+
+##Research Questions
+###Part I.
+What is the prevalence of RNA viruses in bumble bees?  
+Is there evidence for disease spillover from managed honey bees?  
+
+###Part II. 
+Can flowers act as bridges in disease transmission?  
+ #flow chart pictures
+ 
+##Map image
+
+##Field work pictures
+
+##Results
+
+##Results
+
+##Flow Chart
+
+##Results
+
+##Results
+
+##Research Questions
+###Part I.
+What is the prevalence of RNA viruses in bumble bees?
+
+-BQCV is most common, followed by DWV
+    
+Is there evidence for disease spillover from managed honey bees?
+
+-Yes, bumble bees are more likely to be infected when caught near an apiary and when the apiary has high viral loads
+    
+###Part II.   
+Can flowers act as bridges in disease transmission?
+
+ ###flow chart pictures
+ 
+##Flow Chart
+ 
+##Greenhouse pic
+ 
+##bumble Bee pics
+ 
+##plant species pics
+ 
+##Experimental set up pics
+ 
+##Results
+ 
+##plant species slide
+ -Does plant species matter? 
+ 
+##Results
+ 
+##Research Questions
+###Part I.
+What is the prevalence of RNA viruses in bumble bees?
+
+-BQCV is most common, followed by DWV
+    
+Is there evidence for disease spillover from managed honey bees?
+
+-Yes, bumble bees are more likely to be infected when caught near an apiary and when the apiary has high viral loads
+    
+###Part II. 
+Can flowers act as bridges in disease transmission?
+
+-Bees can deposit viruses on flowers
+
+-Plant species and virus matter!
+
+##Questions for future work...
+-Can bees become infected after visiting an infected flower?  
+-Are there differences in how viruses are shed?  
+	 (Fecally vs. Orally)
+-Does floral morphology matter?
+
+##Implications
+
+-BQCV is common in bumble bees and its effects should be studied  
+
+-Reducing honey bee viral loads (mite management) could lessen spillover of DWV  
+
+
+-Recommendations for  ‘pollinator friendly’ habitat  
+
+##Contributors and Collaborators
+>- Alex Burnham
+- Vermont Beekeepers
+- Leif Richardson
+- Melanie Kazenel
+- Anna Smith & Caitlin Danehy
+- Andrew Nguyen
+- Edward Alger
+- Alison Brody
+- Joseph Schall
+- Sara Helms Cahan
+- Taylor Ricketts
+
+
+
+
+ 
+ 

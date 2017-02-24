@@ -1,0 +1,29 @@
+---
+title: "Computational Biology Homepage"
+author: "Samantha Alger"
+date: "Spring Semester 2017"
+output: 
+  prettydoc::html_pretty:
+    highlight: tango
+    theme: united
+---
+
+##Homework Assignments
+
+* [Assignment 2](Assignment2.html)
+* Assignment 3:
+      * [Typora Flow Chart](Drawing_Diagrams_with_Markdown.html)
+      * [PowerPoint](BeeVirusEcology.pdf)
+      * [Beamer Presentation](BeamerPresentation.pdf)
+* Assignment 4:
+      * [MetaData](Homework4.html)
+      * [Regular Expressions](RegularExpressions_HW4.html)
+* [Assignment 5](homework5.html)
+* [Assignment 6 (glossary)](GlossaryHW6.html)
+
+##Other Resources
+
+* [R Markdown Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+* [Lecture Notes](lecture_notes.html)
+
+<img src="beekeepers.JPG" width="300" height="300"/>

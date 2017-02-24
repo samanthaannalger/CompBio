@@ -1,0 +1,38 @@
+---
+title: "First Presentation"
+author: "Samantha A. Alger"
+date: "1/31/2017"
+output: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: serif
+    incremental: yes
+    theme: Madrid
+---
+## First Slide
+
+- First point
+- Second point
+- Third point
+
+## Moving on
+
+```{r, echo=FALSE}
+plot(runif(10))
+```
+
+## Another final slide with simultaneous bullet points
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+> - \color{red}First simultaneous point
+> - \color{blue}Second point
+> - \color{black}Final point
+
+## Another slide testing the color
+
+- point 1
+
