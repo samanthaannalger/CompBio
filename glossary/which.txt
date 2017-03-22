@@ -1,0 +1,25 @@
+### `which`
+#### Samantha Alger
+
+Use which() to find a subset of data that meet a particular criteria
+
+
+```{r}
+#Example 1:
+
+#create a dataset
+bird<- rep_len(c("finch","thrush","warbler"),20)
+
+#use which to figure out the positions of a particular component
+#of the dataset, which ones are "finch", which() returns the position.
+which(bird =="finch")
+
+# Another example:
+
+#For a given vector, which is the index of the 3rd non-NA value?
+#create dataset
+x <- c(1,NA,2,NA,3)
+
+#which position is the third non-NA value? 
+which(!is.na(x))[3]
+```

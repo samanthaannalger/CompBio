@@ -1,0 +1,14 @@
+### `rev`
+#### Samantha Alger
+rev() reverses an R object, including vector, array, etc.
+
+```{r}
+# First create a vector
+x <- c("red","orange","blue")
+
+#check it out
+print(x)
+
+#now reverse the order of the vector and print
+rev(x)
+```

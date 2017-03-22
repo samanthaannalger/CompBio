@@ -1,0 +1,9 @@
+### `rep_len`
+#### Samantha Alger
+
+rep_len() replicates values for a desired length ("len")
+```{r}
+# the following code will repeat the three bird types 20 times
+rep_len(c("finch","thrush","warbler"),20)
+
+```

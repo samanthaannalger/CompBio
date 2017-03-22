@@ -1,0 +1,11 @@
+### `floor`
+#### Samantha Alger
+
+Floor(x) rounds *down* a given number (x) to an integer.
+
+```{r}
+floor(2.76) # the function rounds down 2.76 to the value '2'
+
+floor(-3.456) # the function rounds down -3.456 to the value '-4'
+
+```

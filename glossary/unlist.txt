@@ -1,0 +1,17 @@
+### `unlist`
+#### Samantha Alger
+
+unlist transforms a list structure into a vector.
+
+```{r}
+# setting up a list
+myList <- list(1:30,matrix(1:12,nrow=4,byrow=TRUE),
+               LETTERS[1:5])
+# view the list
+print(myList)
+
+# using the unlist function
+# output produces a vector containing all atomic components of the list
+unlist(myList)
+
+```

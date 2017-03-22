@@ -1,0 +1,29 @@
+### `[[`
+### Samantha Alger
+
+double brackets will return only a single element from a list. A single bracket will return you a list with as many elements.
+
+```{r}
+lst <- list('one','two','three')
+
+a <- lst[1]
+class(a)
+## returns "list"
+
+
+a <- lst[[1]]
+class(a)
+# returns "character"
+
+
+#Example showing different uses with double and single brackets:
+#Create a matrix
+A = matrix(c(2,4,3,1,5,7),nrow=2,ncol=3,byrow=TRUE)
+print(A)
+
+#Use double brackets to see the first element in the matrix
+A[[1]]
+
+#Use single brackets to see the entire first column
+A[,1]
+```

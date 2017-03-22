@@ -1,0 +1,147 @@
+---
+title: "HW8_dataAnalysis"
+author: "Samantha A. Alger"
+date: "3/8/2017"
+output: html_document
+---
+Creating a fake dataset:
+```{r}
+cont1 <- runif(1:30)
+cont2 <- runif(30)
+fact1 <- c(rep("Blue",20), rep("Green",10))
+fact2 <- as.factor(c(rep(1,5), rep(0,25)))
+
+fakeDF <- data.frame(cont1, cont2, fact1, fact2)
+
+```
+
+#########LINEAR REGRESSION#######################################
+```{r}
+# FUNCTION: fitLinear
+# inputs: numeric vector of predictor (x) and response (y)
+# outputs: slope and p-value
+# data
+fitLinear <- function(x=runif(1:40), y=runif(40)) {
+  myMod <- lm(y~x) # fit the model
+  myOut <- c(slope=summary(myMod)$coefficients[2,1],
+             pValue=summary(myMod)$coefficients[2,4])
+  return(myOut)
+}
+fitLinear()
+```
+
+Testing the function on my fake dataset:
+```{r}
+fitLinear(fakeDF$cont1,fakeDF$cont2)
+```
+
+Create output plot
+```{r}
+plotfitLinear <- function(x=runif(1:40), y=runif(40)) {
+  plot1 <- plot(x=x,y=y,pch=21,bg="lightblue",cex=2)
+  myMod <- lm(y~x)
+  abline(myMod)
+  return(plot1)
+}
+plotfitLinear()
+```
+
+Check with fake dataset:
+```{r}
+plotfitLinear(fakeDF$cont1,fakeDF$cont2)
+```
+
+#########ANOVA#########################################
+```{r}
+# FUNCTION: ANOVA
+# inputs: categorical vector predictor (x) numeric vector of  response (y)
+# outputs: p-value
+# data
+
+anovafunc <- function(x=as.factor(rep(c("birds", "poodles"),each=5)), y=runif(10)) {
+  myAnova <- aov(y~x)
+  AnovaOut1 <- summary(myAnova)
+  AnovaOut2 <- print(myAnova)
+  myOut <- list(AnovaOut1,AnovaOut2)
+  return(myOut)
+}
+anovafunc()
+```
+
+Checking function with my data
+```{r}
+anovafunc(fakeDF$fact1, fakeDF$cont1)
+
+```
+
+Function for Anova output:
+```{r}
+myboxplot <- function(x=as.factor(rep(c("birds", "poodles"),each=5)), y=runif(10)) {
+  box <- boxplot(y~x)
+  return(box)
+}
+
+myboxplot()
+
+
+```
+checking function with fake data
+```{r}
+myboxplot(fakeDF$fact1, fakeDF$cont1)
+
+```
+
+######CONTINGENCY TABLE##############################
+```{r}
+# FUNCTION: Contingency Table
+# inputs: categorical vector predictor (x) categorical vector of  response (y)
+# outputs: p-value, x2
+# data
+anovafunc <- function(x=as.factor(rep(c("birds", "poodles"),each=5)), y=as.factor(rep(c("sick", "healthy",each=5)))) {
+  myChi <- chisq.test(y,x)
+  ChiOut1 <- summary(myChi)
+  ChiOut2 <- print(myChi)
+  myOut <- list(ChiOut1,ChiOut2)
+  return(myOut)
+}
+
+anovafunc()
+
+
+# model + model output
+print(chisq.test(dataMatrix))
+
+# plot
+mosaicplot(x=dataMatrix,
+           col=c("goldenrod","grey","black"),
+           shade=FALSE)
+barplot(height=dataMatrix,
+        beside=TRUE,
+        col=c("cornflowerblue","tomato"))
+
+chisq.test(dataMatrix)$expected
+#verify expected counts
+sum(dataMatrix[,1])
+
+
+```
+
+#####LOGISTIC REGRESSION##########################
+```{r}
+# data
+xVar <- rgamma(n=20,shape=5,scale=5)
+yVar <- rbinom(n=20,size=1,p=0.5)
+dataFrame <- data.frame(xVar,yVar)
+
+# model
+logRegMod <- glm(yVar ~ xVar,
+                 data=dataFrame,
+                 family=binomial(link="logit"))
+# model output
+print(logRegMod)
+summary(logRegMod)
+
+# plot
+plot(x=dataFrame$xVar, y=dataFrame$yVar,pch=21,bg="tan",cex=2.5)
+curve(predict(logRegMod,data.frame(xVar=x),type="response"),add=TRUE,lwd=2)
+```

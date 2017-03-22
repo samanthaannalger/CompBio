@@ -1,0 +1,29 @@
+### `[`
+#### Samantha Alger
+
+square brackets ('[') are used to reference or index a particular object within a vector, dataframe, or matrix. 
+
+```{r}
+# for vectors:
+# create a vector
+data = c(1,3,5,7,3,2)
+
+#Using brackets will return the third value of the vector
+data[3] 
+
+#for a given dataframes or matrices:
+# make a dataframe:
+A <- 1:16
+B <- rep(c("red","blue","green","NA"), each =4)
+C <-runif(16)
+data <- data.frame(A,B,C,stringsAsFactors = FALSE)
+
+#check out the dataframe
+print(data)
+
+# Using brackets, the first value specifies the row, the second value specifies the column
+#The following will return the value in the first row, second column of the dataframe:
+data[1,2]
+
+
+```

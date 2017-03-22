@@ -207,10 +207,10 @@ cat(x, sep=&quot;\n&quot;)</code></pre>
 # creating a data set (y) of 10 random atomic components of either red or blue
 y &lt;- sample(c(&quot;red&quot;, &quot;blue&quot;), 10, TRUE)
 y</code></pre>
-<pre><code>##  [1] &quot;red&quot;  &quot;red&quot;  &quot;red&quot;  &quot;blue&quot; &quot;blue&quot; &quot;red&quot;  &quot;blue&quot; &quot;blue&quot; &quot;red&quot;  &quot;blue&quot;</code></pre>
+<pre><code>##  [1] &quot;red&quot;  &quot;blue&quot; &quot;red&quot;  &quot;blue&quot; &quot;red&quot;  &quot;red&quot;  &quot;red&quot;  &quot;blue&quot; &quot;blue&quot; &quot;blue&quot;</code></pre>
 <pre class="r"><code># use cat to concatenate and print the two atomic components x and y
 cat(x, y)</code></pre>
-<pre><code>## 1 2 3 4 5 6 7 8 9 10 red red red blue blue red blue blue red blue</code></pre>
+<pre><code>## 1 2 3 4 5 6 7 8 9 10 red blue red blue red red red blue blue blue</code></pre>
 <pre class="r"><code>#use cat to specify which values to print (first value of each vector) and separate those two values by a tab.
 cat(x[1], y[1], sep=&quot;\t&quot;)</code></pre>
 <pre><code>## 1    red</code></pre>
@@ -275,23 +275,23 @@ write.csv(data, &quot;data.csv&quot;, row.names = FALSE, na = &quot;&quot;)
 
 #check out the csv file created.
 read.csv(&quot;data.csv&quot;)</code></pre>
-<pre><code>##     A     B           C
-## 1   1   red 0.306857961
-## 2   2   red 0.533007182
-## 3   3   red 0.228404323
-## 4   4   red 0.701212808
-## 5   5  blue 0.878012061
-## 6   6  blue 0.007415421
-## 7   7  blue 0.929561471
-## 8   8  blue 0.069873531
-## 9   9 green 0.883198071
-## 10 10 green 0.933710835
-## 11 11 green 0.384732696
-## 12 12 green 0.956763436
-## 13 13  &lt;NA&gt; 0.410416435
-## 14 14  &lt;NA&gt; 0.970666760
-## 15 15  &lt;NA&gt; 0.769786941
-## 16 16  &lt;NA&gt; 0.417092037</code></pre>
+<pre><code>##     A     B          C
+## 1   1   red 0.91270162
+## 2   2   red 0.66345343
+## 3   3   red 0.34697132
+## 4   4   red 0.50606257
+## 5   5  blue 0.65251726
+## 6   6  blue 0.86063331
+## 7   7  blue 0.14748505
+## 8   8  blue 0.34046882
+## 9   9 green 0.39860152
+## 10 10 green 0.32067043
+## 11 11 green 0.78812826
+## 12 12 green 0.41192988
+## 13 13  &lt;NA&gt; 0.66861432
+## 14 14  &lt;NA&gt; 0.28412022
+## 15 15  &lt;NA&gt; 0.97299015
+## 16 16  &lt;NA&gt; 0.05625328</code></pre>
 </div>
 </div>
 <div id="rep_len" class="section level3">
@@ -359,12 +359,12 @@ x &lt;- runif(1:10)
 # take a sample of 100 from x
 # without replacement (we will never find duplicates)
 sample(x, 4, replace = FALSE)</code></pre>
-<pre><code>## [1] 0.4483775 0.2168480 0.1613422 0.3567213</code></pre>
+<pre><code>## [1] 0.81932511 0.08372558 0.88793844 0.63174079</code></pre>
 <pre class="r"><code># if you sample with replacement, you can sample at a size larger than the original object
 #in this case, there will be numbers repeated
 sample(x, 11, replace = TRUE)</code></pre>
-<pre><code>##  [1] 0.7168412 0.8960224 0.3904635 0.7168412 0.2168480 0.4483775 0.8960224
-##  [8] 0.3904635 0.8960224 0.4483775 0.7168412</code></pre>
+<pre><code>##  [1] 0.8193251 0.8879384 0.8440786 0.8879384 0.8879384 0.3359162 0.3124831
+##  [8] 0.8440786 0.6317408 0.6301383 0.6301383</code></pre>
 </div>
 </div>
 <div id="setequal" class="section level3">
@@ -409,23 +409,23 @@ data &lt;- data.frame(A,B,C,stringsAsFactors = FALSE)
 
 #check out the dataframe
 print(data)</code></pre>
-<pre><code>##     A     B         C
-## 1   1   red 0.6834287
-## 2   2   red 0.1520700
-## 3   3   red 0.3586418
-## 4   4   red 0.5331606
-## 5   5  blue 0.2620723
-## 6   6  blue 0.8857957
-## 7   7  blue 0.4729116
-## 8   8  blue 0.5207489
-## 9   9 green 0.8557790
-## 10 10 green 0.7215669
-## 11 11 green 0.8897303
-## 12 12 green 0.8867706
-## 13 13    NA 0.7291437
-## 14 14    NA 0.4716667
-## 15 15    NA 0.8314947
-## 16 16    NA 0.8079167</code></pre>
+<pre><code>##     A     B           C
+## 1   1   red 0.002108186
+## 2   2   red 0.826682980
+## 3   3   red 0.367689416
+## 4   4   red 0.452006319
+## 5   5  blue 0.468060224
+## 6   6  blue 0.966229594
+## 7   7  blue 0.709837525
+## 8   8  blue 0.146217275
+## 9   9 green 0.828484280
+## 10 10 green 0.963524191
+## 11 11 green 0.725213890
+## 12 12 green 0.735710083
+## 13 13    NA 0.749526377
+## 14 14    NA 0.500685158
+## 15 15    NA 0.305466812
+## 16 16    NA 0.064039144</code></pre>
 <pre class="r"><code># Using brackets, the first value specifies the row, the second value specifies the column
 #The following will return the value in the first row, second column of the dataframe:
 data[1,2]</code></pre>
@@ -436,11 +436,94 @@ data[1,2]</code></pre>
 <h3><code>which</code></h3>
 <div id="samantha-alger-12" class="section level4">
 <h4>Samantha Alger</h4>
-<pre class="r"><code>#For a given vector, which is the index of the 3rd non-NA value?
+<p>Use which to find a subset of data that meet a particular criteria.</p>
+<pre class="r"><code>#Example 1:
+
+#create a dataset
+bird&lt;- rep_len(c(&quot;finch&quot;,&quot;thrush&quot;,&quot;warbler&quot;),20)
+
+#use which to figure out the positions of a particular component
+#of the dataset, which ones are &quot;finch&quot;, which() returns the position.
+which(bird ==&quot;finch&quot;)</code></pre>
+<pre><code>## [1]  1  4  7 10 13 16 19</code></pre>
+<pre class="r"><code># Another example:
+
+#For a given vector, which is the index of the 3rd non-NA value?
+#create dataset
 x &lt;- c(1,NA,2,NA,3)
+
+#which position is the third non-NA value? 
 which(!is.na(x))[3]</code></pre>
 <pre><code>## [1] 5</code></pre>
 </div>
+</div>
+<div id="atan2" class="section level3">
+<h3><code>atan2</code></h3>
+</div>
+<div id="samantha-alger-13" class="section level3">
+<h3>Samantha Alger</h3>
+<p>atan2(x,y) is a trigonometric function that computes the arc-tangent of two arguments. It will return the angle between the x-axis and the vector (x,y)</p>
+<pre class="r"><code>atan2(3,4)</code></pre>
+<pre><code>## [1] 0.6435011</code></pre>
+</div>
+<div id="assign" class="section level3">
+<h3><code>assign</code></h3>
+</div>
+<div id="samantha-alger-14" class="section level3">
+<h3>Samantha Alger</h3>
+<p>assign() assigns a value to a name assign(x, value, pos=, envir=…)</p>
+<ul>
+<li><p>x - variable name</p></li>
+<li><p>value - will be assigned to the variable</p></li>
+<li><p>pos - position to do assignment</p></li>
+<li><p>envir - the environment to use</p></li>
+</ul>
+<pre class="r"><code>assign(&quot;z&quot;, 5)
+z</code></pre>
+<pre><code>## [1] 5</code></pre>
+</div>
+<div id="signif" class="section level3">
+<h3><code>signif</code></h3>
+</div>
+<div id="samantha-alger-15" class="section level3">
+<h3>Samantha Alger</h3>
+<p>signif(x, digits=y) rounds a number (x) to a specified number of significant digits (y)</p>
+<pre class="r"><code>signif(7.462527,digits=4)</code></pre>
+<pre><code>## [1] 7.463</code></pre>
+</div>
+<div id="section-1" class="section level3">
+<h3><code>[[</code></h3>
+</div>
+<div id="samantha-alger-16" class="section level3">
+<h3>Samantha Alger</h3>
+<p>double brackets will return only a single element from a list. A single bracket will return you a list with as many elements.</p>
+<pre class="r"><code>lst &lt;- list('one','two','three')
+
+a &lt;- lst[1]
+class(a)</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<pre class="r"><code>## returns &quot;list&quot;
+
+
+a &lt;- lst[[1]]
+class(a)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code># returns &quot;character&quot;
+
+
+#Example showing different uses with double and single brackets:
+#Create a matrix
+A = matrix(c(2,4,3,1,5,7),nrow=2,ncol=3,byrow=TRUE)
+print(A)</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    2    4    3
+## [2,]    1    5    7</code></pre>
+<pre class="r"><code>#Use double brackets to see the first element in the matrix
+A[[1]]</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>#Use single brackets to see the entire first column
+A[,1]</code></pre>
+<pre><code>## [1] 2 1</code></pre>
 </div>
 
 

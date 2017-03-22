@@ -1,0 +1,24 @@
+### `write.csv`
+#### Samantha Alger
+write.csv() is used to write data to a csv file
+
+```{r}
+# a sample data frame
+
+A <- 1:16
+B <- rep(c("red","blue","green","NA"), each =4)
+C <-runif(16)
+data <- data.frame(A,B,C,stringsAsFactors = FALSE)
+
+# write to a file, without row names
+write.csv(data, "data.csv")
+
+# same, except without row names
+write.csv(data, "data.csv", row.names = FALSE)
+
+# same, except of "NA", return blank cell
+write.csv(data, "data.csv", row.names = FALSE, na = "")
+
+#check out the csv file created.
+read.csv("data.csv")
+```

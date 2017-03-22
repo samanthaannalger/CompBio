@@ -268,10 +268,95 @@ data[1,2]
 ### `which`
 #### Samantha Alger
 
+Use which to find a subset of data that meet a particular criteria.
 
 ```{r}
-#For a given vector, which is the index of the 3rd non-NA value?
-x <- c(1,NA,2,NA,3)
-which(!is.na(x))[3]
+#Example 1:
 
+#create a dataset
+bird<- rep_len(c("finch","thrush","warbler"),20)
+
+#use which to figure out the positions of a particular component
+#of the dataset, which ones are "finch", which() returns the position.
+which(bird =="finch")
+
+# Another example:
+
+#For a given vector, which is the index of the 3rd non-NA value?
+#create dataset
+x <- c(1,NA,2,NA,3)
+
+#which position is the third non-NA value? 
+which(!is.na(x))[3]
+```
+
+### `atan2`
+### Samantha Alger
+
+
+atan2(x,y) is a trigonometric function that computes the arc-tangent of two arguments. It will return the angle between the x-axis and the vector (x,y)
+```{r}
+atan2(3,4)
+```
+
+
+### `assign`
+### Samantha Alger
+
+assign() assigns a value to a name
+assign(x, value, pos=, envir=...)
+
+* x - variable name
+
+* value - will be assigned to the variable
+
+* pos - position to do assignment
+
+* envir - the environment to use
+
+```{r}
+assign("z", 5)
+z
+
+```
+
+
+### `signif`
+### Samantha Alger
+
+signif(x, digits=y) rounds a number (x) to a specified number of significant digits (y)
+
+```{r}
+signif(7.462527,digits=4)
+
+```
+
+### `[[`
+### Samantha Alger
+
+double brackets will return only a single element from a list. A single bracket will return you a list with as many elements.
+
+```{r}
+lst <- list('one','two','three')
+
+a <- lst[1]
+class(a)
+## returns "list"
+
+
+a <- lst[[1]]
+class(a)
+# returns "character"
+
+
+#Example showing different uses with double and single brackets:
+#Create a matrix
+A = matrix(c(2,4,3,1,5,7),nrow=2,ncol=3,byrow=TRUE)
+print(A)
+
+#Use double brackets to see the first element in the matrix
+A[[1]]
+
+#Use single brackets to see the entire first column
+A[,1]
 ```

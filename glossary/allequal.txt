@@ -1,0 +1,21 @@
+### `all.equal`
+#### Samantha Alger
+
+all.equal(target,current) will check if two objects are equal, or nearly equal.
+
+* target-An R object
+* current- A second R object to compare to target (the first argument)
+
+Output will give the difference betwen the objects or will return TRUE if the values are sufficiently close enough
+
+```{r}
+all.equal(pi, 3.14)
+
+all.equal(pi, 3.1415)
+
+all.equal(pi, 3.141592)
+
+all.equal(pi, 3.14159265)
+
+
+```

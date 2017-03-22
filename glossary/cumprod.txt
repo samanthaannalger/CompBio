@@ -1,0 +1,17 @@
+### `cumprod`
+#### Samantha Alger
+
+cumprod() returns a vector with elements that are the cumulative products
+
+```{r}
+# create a vector consisting of 3 elements
+x <-c(3,5,10)
+
+# cumprod(x) will find the cumulative products
+cumprod(x)
+
+# the cumprod() function is doing the following calculations:
+3 * 1
+3 * 5
+3*5*10
+```

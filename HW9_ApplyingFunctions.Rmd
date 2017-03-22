@@ -1,0 +1,153 @@
+---
+title: "HW9_ApplyingFunctions"
+author: "Samantha A. Alger"
+date: "3/22/2017"
+output: html_document
+---
+```{r}
+# Clear memory of characters:
+ls()
+rm(list=ls())
+
+#Set Working Directory: 
+setwd("~/CompBio")
+
+# get programs
+library(plyr)
+library(dplyr)
+
+# read in data:
+plantTrans <- read.csv("plantTransPlantsCompBio.csv", header=TRUE, sep = ",", stringsAsFactors=FALSE)
+
+BombSurvey <- read.csv("2015SurveyCompBio.csv", header=TRUE, sep = ",", stringsAsFactors=FALSE)
+
+head(BombSurvey)
+
+#adding a column that will be the log transformation of VL to fix non-normality
+BombSurvey$VL <- log(BombSurvey$BombusViralLoad)
+#Make all '-Inf' into zeros
+BombSurvey$VL[BombSurvey$VL == "-Inf"] <- 0
+#check distribution
+hist(BombSurvey$VL)
+```
+
+Linear Regression:
+```{r}
+#########LINEAR REGRESSION#######################################
+
+# FUNCTION: fitLinear
+# inputs: numeric vector of predictor (x) and response (y)
+# outputs: slope and p-value
+# data
+
+#Splitting the dataframe based on virus target:
+DWV <- subset(BombSurvey, target_name=="DWV")
+BQCV <- subset(BombSurvey, target_name=="BQCV")
+
+
+#Creating a two column dataframe for the linear regression
+names(DWV)
+BQReg<-cbind(BQCV$sumApiaries, BQCV$BombPrev)
+DWReg <- cbind(DWV$sumApiaries, DWV$BombPrev)
+
+#Get rid of zeros, (STILL WORKING ON THIS)
+
+#creating a two column dataframe for the ANOVA
+BQAnov <- cbind(BQCV$VL,BQCV$apiary_near_far)
+DWAnov <- cbind(DWV$VL,DWV$apiary_near_far)
+
+fitLinear <- function(data=data.frame(runif(10),runif(10))) {
+  x = data[,1]
+  y = data[,2]
+  myMod <- lm(y~x) # fit the model
+  myOut <- c(slope=summary(myMod)$coefficients[2,1],
+             pValue=summary(myMod)$coefficients[2,4])
+  return(myOut)
+}
+fitLinear()
+
+#Testing the function on my dataset:
+
+#Using the linear regression function:
+fitLinear(BQReg)
+fitLinear(DWReg)
+
+
+#Create output plot
+plotfitLinear <- function(data=data.frame(runif(10),runif(10))) {
+  x = data[,1]
+  y = data[,2]
+  plot1 <- plot(x=x,y=y,pch=21,bg="lightblue",cex=2)
+  myMod <- lm(y~x)
+  abline(myMod)
+  return(plot1)
+}
+plotfitLinear()
+
+
+#Plotting my data
+
+plotfitLinear(BQReg)
+plotfitLinear(DWReg)
+
+
+```
+
+ANOVA
+```{r}
+#########ANOVA#########################################
+
+# FUNCTION: ANOVA
+# inputs: categorical vector predictor (x) numeric vector of  response (y)
+# outputs: p-value
+# data
+
+anovafunc <- function(data=data.frame(runif(10),rep(c("birds","poodles"),each=5))) {
+  x = data[,2]
+  y = data[,1]
+  myAnova <- aov(y~x)
+  AnovaOut1 <- summary(myAnova)
+  AnovaOut2 <- print(myAnova)
+  myOut <- list(AnovaOut1,AnovaOut2)
+  return(myOut)
+}
+anovafunc()
+
+#Checking function with my data
+anovafunc(BQAnov)
+anovafunc(DWAnov)
+
+#Function for Anova output:
+myboxplot <- function(data=data.frame(runif(10),rep(c("birds","poodles"),each=5))) {
+  x = data[,2]
+  y = data[,1]
+  box <- boxplot(y~x)
+  return(box)
+}
+
+myboxplot()
+
+#Plotting my data
+myboxplot(BQAnov)
+myboxplot(DWAnov)
+```
+
+Contingency Table:
+```{r}
+#############################################
+#Data setup for contingency table 
+#HBplants <- subset(plantTrans, group=="T")
+#HBplants <- ddply(HBplants, c("spp"), summarise, 
+ #                 n = length(BINYprefilter),
+  #                mean = mean(BINYprefilter, na.rm=TRUE),
+   #               sum = sum(BINYprefilter, na.rm = TRUE),
+    #              sd = sd(BINYprefilter, na.rm=TRUE),
+     #             se = sd / sqrt(n))
+
+#Checking function with my data
+#anovafunc(HBplants$spp,HBplants$mean)
+```
+
+Creating a Random Dataset 
+```{r}
+#Creating Random Data Set

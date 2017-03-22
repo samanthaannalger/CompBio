@@ -1,0 +1,9 @@
+### `atan2`
+### Samantha Alger
+
+
+atan2(x,y) is a trigonometric function that computes the arc-tangent of two arguments. It will return the angle between the x-axis and the vector (x,y)
+
+```{r}
+atan2(3,4)
+```

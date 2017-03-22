@@ -1,0 +1,43 @@
+### `cat`
+#### Samantha Alger
+Print output to the screen or to a file. Use 'cat' instead of 'print' to print information from a function.
+cat(..., file "", sep="",append=FALSE)
+
+  * ... -The information to be printed to the screen or saved file
+  
+  * file- Specifies a file to be created (this is optional)
+  
+  * sep -Specifies what separates the objects in...that are to be printed.
+  
+  * append -If a file is specified, then indicate whether to append to the content in the existing file (the default is not to append, which means to overwrite the existing content).
+  
+```{r}
+
+x <- c(1:10)
+print(x)
+
+# Space separator
+cat(x)
+
+# Multi-space separator, and adds a period between each number
+cat(x, sep=" . ")
+
+# Separates each number by a tab
+cat(x, sep="\t")
+
+# Separates each number by a line break
+cat(x, sep="\n")
+
+# Use cat to index particular values
+# and specify how those values will be printed using sep
+
+# creating a data set (y) of 10 random atomic components of either red or blue
+y <- sample(c("red", "blue"), 10, TRUE)
+y
+
+# use cat to concatenate and print the two atomic components x and y
+cat(x, y)
+
+#use cat to specify which values to print (first value of each vector) and separate those two values by a tab.
+cat(x[1], y[1], sep="\t")
+```

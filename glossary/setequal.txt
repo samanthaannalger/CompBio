@@ -1,0 +1,20 @@
+### `setequal`
+#### Samantha Alger
+setequal() tests if two vectors are equal. The function will return a logical response: (TRUE or FALSE). 
+
+```{r}
+#create two different vectors using the sample function that will randomly sample 10 numbers from 1 to 100.
+x <- sample(1:100, size=10)
+y <- sample(1:100, size=10)
+
+#use setequal to check if the two vectors are the same. since we are using the sample function, we are randomly sampling and so the two vectors will be different. setequal returns a FALSE value. 
+setequal(x,y)
+
+#another example:
+birds <- rep_len(c("finch","thrush","warbler"),20)
+birds2 <- rep_len(c("NA","thrush","warbler"),20) 
+
+#using setequal returns a FALSE value because there is one value different
+setequal(birds,birds2)
+
+```

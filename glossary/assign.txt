@@ -1,0 +1,15 @@
+### `assign`
+### Samantha Alger
+
+assign() assigns a value to a name
+assign(x, value, pos=, envir=...)
+* x - variable name
+* value - will be assigned to the variable
+* pos - position to do assignment
+* envir - the environment to use
+
+```{r}
+assign("z", 5)
+z
+
+```

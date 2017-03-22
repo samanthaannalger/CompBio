@@ -1,0 +1,24 @@
+### `sample`
+#### Samantha Alger
+
+sample() will take a random sample of a specified size. You can specify whether to sample with or without replacement.
+
+sample(x, size, replace =FALSE)
+
+* x - object to be sampled
+* size - size of the sample
+* replace - should sampling be with replacement?
+
+```{r}
+#create an object to sample
+x <- runif(1:10)
+
+# take a sample of 100 from x
+# without replacement (we will never find duplicates)
+sample(x, 4, replace = FALSE)
+
+# if you sample with replacement, you can sample at a size larger than the original object
+#in this case, there will be numbers repeated
+sample(x, 11, replace = TRUE)
+
+```

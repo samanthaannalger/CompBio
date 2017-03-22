@@ -245,9 +245,9 @@ Data Frame:
 
     *   author email, author address, author website,
 
-                    ______________-
+                        ______________-
 
-                    ​
+                        ​
 
     *   ownership, collaborators, funding sources
 
@@ -255,9 +255,9 @@ Data Frame:
 
     *   citations: pubs that cite or use these data
 
-                    _______
+                        _______
 
-                    ​
+                        ​
 
     *   sampling locations: one or more lines about where data were collected, GPS coordinates should be in data columns
 
@@ -267,316 +267,316 @@ Data Frame:
 
     *   missing data: one or more lines for each variable describing why values are missing
 
-                    ______________________________
+                        ______________________________
 
-                    ​
+                        ​
 
     *   data track changes log: Use section to record any changes to the data set after is is created. 
 
     *   (This could also be tracked in GitHub commits)
 
-                    _____________________________
+                        _____________________________
 
-                    Start of Data
+                        Start of Data
 
-                    ______
+                        ______
 
-                    GitIgnore can keep datafiles from being uploaded to GitHub
+                        GitIgnore can keep datafiles from being uploaded to GitHub
 
-                  ## 2017-2-7
+                      ## 2017-2-7
 
-                  metacharacters- a handful of expressions that allow you to search for something other than a simple character.
+                      metacharacters- a handful of expressions that allow you to search for something other than a simple character.
 
-                  "escaping the metacharacter":  Use a blackslash before the character:  \
+                      "escaping the metacharacter":  Use a blackslash before the character:  \
 
-                  ####List of useful meta characters (Wild Cards)
+                      ####List of useful meta characters (Wild Cards)
 
-                a single "word" character, (all caps, all lower case, 0-9, _) 
+                    a single "word" character, (all caps, all lower case, 0-9, _) 
 
-                ​```
-                \w
-                ​```
-                
-                a single number character (0-9)
-                
-                ​```
-                \d
-                ​```
-                
-                a single tab space
-                
-                ​```
-                \t
-                ​```
-                
-                a single tab space or line break
-                
-                ​```
-                \s
-                ​```
-                
-                a single line break
-                
-                ​```
-                \n
-                ​```
-                
-                any single letter, digit, space, symbol, end of line
-                
-                ​```
-                \.
-                ​```
+                    ​```
+                    \w
+                    ​```
+                    
+                    a single number character (0-9)
+                    
+                    ​```
+                    \d
+                    ​```
+                    
+                    a single tab space
+                    
+                    ​```
+                    \t
+                    ​```
+                    
+                    a single tab space or line break
+                    
+                    ​```
+                    \s
+                    ​```
+                    
+                    a single line break
+                    
+                    ​```
+                    \n
+                    ​```
+                    
+                    any single letter, digit, space, symbol, end of line
+                    
+                    ​```
+                    \.
+                    ​```
+                    
+                    ___________
+                    
+                    Real world application**
+                    
+                    repairing a pdf
+                    
+                    find:
+                    
+                    ​```
+                    \. \s
+                    ​```
+                    
+                    replace:
+                    
+                    ​```
+                    \. \n
+                    ​```
+                    
+                    _________
+                    
+                    #### Negated WildCards
+                    
+                    By making it capital, give me anything that is 'not' in that list...
+                    
+                    So, every WildCard has a complementary version...
+                    
+                    ​
+                    
+                    Matches anything that is not a single word character
+                    
+                    ​```
+                    \W
+                    ​```
+                    
+                    Matches things that are not a single number
+                    
+                    ​```
+                    \D
+                    ​```
+                    
+                    ### Custom Character Sets
+                    
+                    ​
+                    
+                    ​```
+                    [A-Za-z]
+                    ​```
+                    
+                    If working with DNA sequences...
+                    
+                    ​```
+                    [ACTG]
+                    ​```
+                    
+                    ###Negated Character Sets
+                    
+                    Anything but a capital letter
+                    
+                    ​```
+                    [^A-Z]
+                    ​```
+                  
+                  Equal to \W
+                  
+                  ​```
+                  [^A-Za-z0-9]
+                  ​```
+                  
+                  Anything except a tab = \T
+                  
+                  ​```
+                  [^\t]
+                  ​```
+                  
+                  ### Quantifiers
+                  
+                  1 or more consecutive word characters
+                  
+                  ​```
+                  \w+
+                  ​```
+                  
+                  0 or more consecutive word characters
+                  
+                  ​```
+                  \w*
+                  ​```
+                  
+                  exactly 3 consecuative word characters
+                  
+                  ​```
+                  \w{3}
+                  ​```
+                  
+                  exactly 3, 4, or 5 matches
+                  
+                  ​```
+                  \w{3,5}
+                  ​```
+                  
+                  3 or more matches
+                  
+                  ​```
+                  \w{3,}
+                  ​```
+                  
+                  ​```
+                  [ACTG]{3}
+                  ​```
+                  
+                  0 or more consecutive spaces
+                  
+                  ​```
+                  \s*
+                  ​```
+                  
+                  ________
+                  
+                  ​
+                  
+                  #### Real world example
+                  
+                  crow, raven  ,grackle,starling ,  robin
+                  
+                  find:
+                  
+                  ​```
+                  \s*,\s
+                  ​```
+                  
+                  replace
+                  
+                  ​```
+                  ,
+                  ​```
+                  
+                  sentence becomes:
+                  
+                  crow,raven,grackle,starling,robin
+                  
+                  ______
+                  
+                  parentheses indicate portions that you want to keep:
+                  
+                  find:
+                  
+                  ​```
+                  (\w+),\s*(\w+).*
+                  ​```
+                  
+                  replace:
+                  
+                  ​```
+                  \2 # \1
+                  ​```
+                  
+                  This:
+                  
+                  x, MyWord OtherJunk. ,
+                  13, MyWord2,OtherStuff,,
+                  x13, MyThirdWord,    MoreTrash!#
+                  xxx,LastWord    x.
+                  
+                  Becomes:
+                  
+                  MyWord # x
+                  MyWord2 # 13
+                  MyThirdWord # x13
+                  LastWord # xxx
+                  
+                  ​
                 
                 ___________
                 
-                Real world application**
+                ### 2017-02-09
                 
-                repairing a pdf
+                ​```
+                \w{1,3}
+                ​```
+                
+                include words that have 1-3 characters
+                
+                #### Regular Expressions continued: Boundary stakes
+                
+                indicate before or after, not after the character itself
+                
+                ​```
+                ^
+                ​```
+                
+                start of line
+                
+                ​```
+                $
+                ​```
+                
+                end of line
+                
+                ​```
+                \b
+                ​```
+                
+                beginning or ending of a word
+                
+                example: \ba\b (only will find words that begin and end with the letter a)
+
+        ```json
+                \B
+        ```
+
+                NOT a beginning or ending of a word
+
+                example: \Ba\B will get only a's that are in the middle of a word. 
+
+                ​
+
+                _________
+
+                input:
+
+                ​```
+                WordA,OneWord,WordZ
+                
+                WordA,Two Words,WordZ
+                
+                WordA,Three More Words,WordZ
+                
+                WordA,Four Or More Words,WordZ
+                ​```
                 
                 find:
                 
                 ​```
-                \. \s
+                ^\w+,((\w+ )*\w+),\w+$
                 ​```
                 
                 replace:
                 
                 ​```
-                \. \n
+                \1
                 ​```
                 
-                _________
-                
-                #### Negated WildCards
-                
-                By making it capital, give me anything that is 'not' in that list...
-                
-                So, every WildCard has a complementary version...
-                
-                ​
-                
-                Matches anything that is not a single word character
+                output:
                 
                 ​```
-                \W
+                OneWord
+                Two Words
+                Three More Words
+                Four Or More Words
                 ​```
-                
-                Matches things that are not a single number
-                
-                ​```
-                \D
-                ​```
-                
-                ### Custom Character Sets
-                
-                ​
-                
-                ​```
-                [A-Za-z]
-                ​```
-                
-                If working with DNA sequences...
-                
-                ​```
-                [ACTG]
-                ​```
-                
-                ###Negated Character Sets
-                
-                Anything but a capital letter
-                
-                ​```
-                [^A-Z]
-                ​```
-              
-              Equal to \W
-              
-              ​```
-              [^A-Za-z0-9]
-              ​```
-              
-              Anything except a tab = \T
-              
-              ​```
-              [^\t]
-              ​```
-              
-              ### Quantifiers
-              
-              1 or more consecutive word characters
-              
-              ​```
-              \w+
-              ​```
-              
-              0 or more consecutive word characters
-              
-              ​```
-              \w*
-              ​```
-              
-              exactly 3 consecuative word characters
-              
-              ​```
-              \w{3}
-              ​```
-              
-              exactly 3, 4, or 5 matches
-              
-              ​```
-              \w{3,5}
-              ​```
-              
-              3 or more matches
-              
-              ​```
-              \w{3,}
-              ​```
-              
-              ​```
-              [ACTG]{3}
-              ​```
-              
-              0 or more consecutive spaces
-              
-              ​```
-              \s*
-              ​```
-              
-              ________
-              
-              ​
-              
-              #### Real world example
-              
-              crow, raven  ,grackle,starling ,  robin
-              
-              find:
-              
-              ​```
-              \s*,\s
-              ​```
-              
-              replace
-              
-              ​```
-              ,
-              ​```
-              
-              sentence becomes:
-              
-              crow,raven,grackle,starling,robin
-              
-              ______
-              
-              parentheses indicate portions that you want to keep:
-              
-              find:
-              
-              ​```
-              (\w+),\s*(\w+).*
-              ​```
-              
-              replace:
-              
-              ​```
-              \2 # \1
-              ​```
-              
-              This:
-              
-              x, MyWord OtherJunk. ,
-              13, MyWord2,OtherStuff,,
-              x13, MyThirdWord,    MoreTrash!#
-              xxx,LastWord    x.
-              
-              Becomes:
-              
-              MyWord # x
-              MyWord2 # 13
-              MyThirdWord # x13
-              LastWord # xxx
-              
-              ​
-            
-            ___________
-            
-            ### 2017-02-09
-            
-            ​```
-            \w{1,3}
-            ​```
-            
-            include words that have 1-3 characters
-            
-            #### Regular Expressions continued: Boundary stakes
-            
-            indicate before or after, not after the character itself
-            
-            ​```
-            ^
-            ​```
-            
-            start of line
-            
-            ​```
-            $
-            ​```
-            
-            end of line
-            
-            ​```
-            \b
-            ​```
-            
-            beginning or ending of a word
-            
-            example: \ba\b (only will find words that begin and end with the letter a)
-
-        ```json
-            \B
-        ```
-
-            NOT a beginning or ending of a word
-
-            example: \Ba\B will get only a's that are in the middle of a word. 
-
-            ​
-
-            _________
-
-            input:
-
-            ​```
-            WordA,OneWord,WordZ
-            
-            WordA,Two Words,WordZ
-            
-            WordA,Three More Words,WordZ
-            
-            WordA,Four Or More Words,WordZ
-            ​```
-            
-            find:
-            
-            ​```
-            ^\w+,((\w+ )*\w+),\w+$
-            ​```
-            
-            replace:
-            
-            ​```
-            \1
-            ​```
-            
-            output:
-            
-            ​```
-            OneWord
-            Two Words
-            Three More Words
-            Four Or More Words
-            ​```
 
 _________
 
@@ -691,5 +691,61 @@ Disadvantages:
 
 ___________
 
-### 2017-2-21
+### 2017-3-2
+
+### Anatomy of a function
+
+\####
+\# Function: Function Name
+\# descriptors
+\# inputs
+\# outputs
+FunctionName <- function (parX = defaultX,
+
+​						par Y = default Y
+
+​						par Z = default Z) {            \#start of function
+
+ -lines of R code and annotations
+-calls to other functions
+-create new functions
+-operations on parX, parY, parZ
+
+….
+
+myOut <-
+
+return(myOut) 
+
+}          \#end of function body
+
+\#####
+
+print(functionName)
+functionName(a,b,c)
+functionName()
+
+
+
+## 2017-03-09
+
+Research talk: 15 min
+
+little introduction
+
+few slides showing code "under the hood" for some analyses that I conducted
+
+R talk: 1/2 hour
+
+pick a package and give a lecture like Gotellii
+
+
+
+
+
+
+
+
+
+
 

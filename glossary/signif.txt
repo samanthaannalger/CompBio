@@ -1,0 +1,9 @@
+### `signif`
+### Samantha Alger
+
+signif(x, digits=y) rounds a number (x) to a specified number of significant digits (y)
+
+```{r}
+signif(7.462527,digits=4)
+
+```

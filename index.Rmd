@@ -19,7 +19,10 @@ output:
       * [MetaData](Homework4.html)
       * [Regular Expressions](RegularExpressions_HW4.html)
 * [Assignment 5](homework5.html)
-* [Assignment 6 (glossary)](GlossaryHW6.html)
+* [Assignment 6 & 7 (glossary)](GlossaryHW6.html)
+* [Assignment 8](HW8_dataAnalysis.html)
+* [Assignment 9](HW9_ApplyingFunctions.html)
+
 
 ##Other Resources
 

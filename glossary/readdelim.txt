@@ -1,0 +1,20 @@
+### `read.delim`
+#### Samantha Alger
+
+read.delim() is used to read in delimited text files, where data is organized in a data matrix with rows representing cases and columns representing variables.
+read.delim(file,header=TRUE,sep="\t")
+
+* file -A file location
+
+* header - Whether the first line describes the column names
+
+* sep - The table delimiter, often a tab (\t) or comma
+
+
+```{r}
+#The following is an example for how you would read in a .txt file.
+#It is commented out since the .txt file does not exist
+
+#d <-read.delim("annual.txt", header= TRUE, sep="\t")
+
+```
