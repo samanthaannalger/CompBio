@@ -72,11 +72,23 @@ GraphResults <- function(xVar=runif(10),
   
   message("Message: Regression graph created")
 }
-GraphResults()
-
-
+#-------------------------------------------------------
+# Global Variables
+antFile <- "antcountydata.csv" # New England ant data
+xCol <- 7 # column 7 = latitude centroid of county
+yCol <- 5 # column 5 = number of ant species
+#-------------------------------------------------------
+#
 # Program Body
-GetData()
-CalculateStuff()
-SummarizeOutput()
-GraphResults()
+temp1 <- GetData(fileName = antFile)
+
+x <- temp1[,xCol]
+y <- temp1[,yCol]
+
+temp2 <- FitRegressionModel(xVar=x,yVar=y)
+temp3 <- SummarizeOutput(temp2)
+
+GraphResults(xVar=x, yVar=y)
+
+print(temp3)
+print(temp2)
