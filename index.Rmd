@@ -22,6 +22,7 @@ output:
 * [Assignment 6 & 7 (glossary)](GlossaryHW6.html)
 * [Assignment 8](HW8_dataAnalysis.html)
 * [Assignment 9](HW9_ApplyingFunctions.html)
+* [Assignment 10](HW10_ForLoops.html)
 
 
 ##Other Resources

@@ -1,0 +1,92 @@
+---
+title: "HW 10 For Loops"
+author: "Samantha A. Alger"
+date: "4/5/2017"
+output: html_document
+---
+
+1. For loop to calculate the number of zeros in a vector:
+
+```{r}
+#Create a numeric vector
+Vec1 <- round(runif(10))
+x <- 0
+
+for ( i in seq_along(Vec1)) {
+  if (Vec1[i] == 0)
+    x <- 1 + x
+}
+print(x)
+```
+
+2. Use subsetting to rewrite function as a single line of code
+```{r}
+x <- length(subset(Vec1,Vec1==0))
+x
+```
+
+3. Create a function that makes a vector that stores all possible pairwise differences and then extracts the maximum value from the list
+
+```{r}
+vec2 <- round(runif(10),2)
+
+returnMaxDiff <- function(myvec=vec2){
+mat <- matrix(numeric(length(myvec)^2), nrow=length(myvec))
+
+for (i in seq_along(myvec)){
+for (j in seq_along(myvec)){
+
+  mat[i,j] <- myvec[i]-myvec[j]
+
+}
+} 
+x <- c(mat)
+return(list(max(abs(x))))
+}
+
+returnMaxDiff()
+```
+
+4. Now modify the output of (3) to yield a list with 3 elements. The first list item is the pair of vector values that are the maximum distance apart, the second list item is the pair of numbers representing the position of these elements in the vector, and the third list item is the maximum distance calculated from this pair.
+
+```{r}
+returnMaxDiff <- function(myvec=vec2){
+mat <- matrix(numeric(length(myvec)^2), nrow=length(myvec), dimnames = list(myvec, myvec))
+
+for (i in seq_along(myvec)){
+for (j in seq_along(myvec)){
+  mat[i,j] <- myvec[i]-myvec[j]
+
+  }
+} 
+x <- c(mat)
+p <- (which(mat == max(abs(mat)), arr.ind=TRUE))
+name1 = rownames(mat)[p[,1]]
+name2 = rownames(mat)[p[,2]]
+m <- (max(abs(x)))
+
+return(cat(name1, name2 , p, m))
+}
+
+returnMaxDiff()
+
+```
+
+5. For a second version of (3), store only a temp variable that keeps track of each difference and then retains only the largest difference as it cycles through the pairwise differences.
+```{r}
+```
+
+
+6.Write a function that takes as input two matrices, and then multiplies them together, using the rules of matrix multiplication. Your function should return a warning if the input matrices are not of the correct dimensions for matrix multiplication. Check the performance of your function by comparing with the built in R function for matrix multiplication %*%.
+
+```{r}
+```
+
+7.Write a function that takes as input two integers representing the number of rows and columns in a matrix. The output is a matrix of these dimensions in which each element is the product of the row number x the column number.
+
+```{r}
+```
+
+
+
+
