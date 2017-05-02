@@ -10,7 +10,7 @@ output:
 
 ## R Presentation
 * [Script: Working with Spatial Data and using tmap()](SpatialDataTutorial.html)
-* TESTING
+
 ##Homework Assignments
 
 * [Assignment 2](Assignment2.html)
