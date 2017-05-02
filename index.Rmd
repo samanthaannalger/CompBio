@@ -17,7 +17,7 @@ output:
 * Assignment 3:
       * [Typora Flow Chart](Drawing_Diagrams_with_Markdown.html)
       * [PowerPoint](BeeVirusEcology.pdf)
-      * [Beamer Presentation](BeamerPresentation.pdf)
+      * [Beamer Presentation](ResearchTalk.pdf)
 * Assignment 4:
       * [MetaData](Homework4.html)
       * [Regular Expressions](RegularExpressions_HW4.html)
