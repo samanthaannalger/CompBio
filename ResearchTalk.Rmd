@@ -1,0 +1,343 @@
+---
+title: "ReasearchTalk"
+author: "Samantha A. Alger"
+date: "5/1/2017"
+output: beamer_presentation
+---
+
+##
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+###The role of plants in bee virus transmission 
+
+
+Samantha Alger
+\begin{picture}(320,250)
+ \put(-15,90){\includegraphics[height=4cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/Virions.png}}
+ \put(00,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+##
+\begin{picture}(320,250)
+ \put(20,-10){\includegraphics[height=9cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/affinis.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+## RNA Viruses
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+Deformed Wing Virus (DWV)  
+
+
+
+
+Black Queen Cell Virus (BQCV)  
+
+
+
+
+Israeli Acute Paralysis Virus (IAPV)
+
+\begin{picture}(320,250)
+ \put(200,200){\includegraphics[height=4.5cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/viruses.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+  \end{minipage}}
+ \end{picture}
+
+
+## Transmission Routes
+
+\begin{picture}(320,250)
+ \put(-20,0){\includegraphics[height=8.75cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/TransFlow.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+##Research Questions
+###Part I.
+What is the prevalence of RNA viruses in bumble bees?  
+Is there evidence for disease spillover from managed honey bees?  
+
+###Part II. 
+Can flowers act as bridges in disease transmission?
+
+ 
+##Part I: Survey
+\begin{picture}(320,250)
+ \put(-60,10){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/Map.pdf}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+##Code for Map 
+
+\begin{picture}(320,250)
+\put(-10,60){\includegraphics[height=4cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/code1.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+##Code for Map 
+
+\begin{picture}(320,250)
+ \put(-20,30){\includegraphics[height=6.5cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/MapPointsOnly.pdf}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+##Code for Map 
+
+\begin{picture}(320,250)
+\put(-10,50){\includegraphics[height=5cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/code2.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+##Code for Map 
+
+\begin{picture}(320,250)
+\put(-5,50){\includegraphics[height=5cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/code3.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+##Final Map
+\begin{picture}(320,250)
+ \put(-60,10){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/Map.pdf}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+
+##Part I: Survey
+
+\begin{picture}(320,250)
+\put(-5,15){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/FieldPhotos.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+##QPCR
+\begin{picture}(320,250)
+ \put(-5,15){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/PCR.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+##BQCV More Prevalent in *bimaculatus*
+\begin{picture}(320,250)
+ \put(-5,15){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/species.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+##Viruses More Prevalent in Bumble Bees near Apiaries
+\begin{picture}(320,250)
+ \put(-5,15){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/ApiaryNearFar.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+##Flow Chart
+\begin{picture}(320,250)
+ \put(-20,100){\includegraphics[height=9cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/Trans.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+##
+\begin{picture}(320,250)
+ \put(-5,15){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/PlantVials.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+##Viruses detected on plants collected only in apiaries!
+\begin{picture}(320,250)
+ \put(-5,15){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/SurveyPlants.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+##Research Questions
+###Part I.
+What is the prevalence of RNA viruses in bumble bees?
+
+**-BQCV is most common, followed by DWV**
+    
+Is there evidence for disease spillover from managed honey bees?
+
+**-Yes, bumble bees are more likely to be infected when caught near an apiary and when the apiary has high viral loads**
+    
+###Part II.   
+Can flowers act as bridges in disease transmission?
+
+ 
+##
+
+\begin{picture}(320,250)
+ \put(-20,100){\includegraphics[height=9cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/Trans.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+##
+\begin{picture}(320,250)
+ \put(-5,15){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/ExpPlants.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+
+ 
+##
+\begin{picture}(320,250)
+ \put(-5,15){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/Microcolonies.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+ 
+##Experimental Setup
+\begin{picture}(320,250)
+ \put(-5,15){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/Exp.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+##Viruses detected only on plants visited by honeybees
+\begin{picture}(320,250)
+ \put(-5,15){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/ExpResults1.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+##Does plant species matter? 
+ \begin{picture}(320,250)
+ \put(-5,15){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/ExpPlants.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+##
+\begin{picture}(320,250)
+ \put(-5,15){\includegraphics[height=8.25cm]
+ {/Users/samanthaalger/CompBio/Beamerfigs/ExpResults2.png}}
+ \put(0,100){\begin{minipage}[t]{1\linewidth}
+ {}
+ \end{minipage}}
+ \end{picture}
+ 
+##Conclusions
+###Part I.
+What is the prevalence of RNA viruses in bumble bees?
+
+**-BQCV is most common, followed by DWV**
+    
+Is there evidence for disease spillover from managed honey bees?
+
+**-Yes, bumble bees are more likely to be infected when caught near an apiary and when the apiary has high viral loads**
+    
+###Part II. 
+Can flowers act as bridges in disease transmission?
+
+**-Bees can deposit viruses on flowers**
+
+**-Plant species and virus matter!**
+
+##Questions for future work...
+-Can bees become infected after visiting an infected flower?  
+-Are there differences in how viruses are shed?  
+	 (Fecally vs. Orally)
+-Does floral morphology matter?
+
+##Implications
+
+-BQCV is common in bumble bees and its effects should be studied  
+
+-Reducing honey bee viral loads (mite management) could lessen spillover of DWV  
+
+
+-Recommendations for  ‘pollinator friendly’ habitat  
+
+##Contributors and Collaborators
+* Alex Burnham
+
+* Vermont Beekeepers
+
+* Leif Richardson
+
+* Melanie Kazenel
+
+* Anna Smith & Caitlin Danehy
+
+* Sarah Erskine
+
+* Andrew Nguyen
+
+* Alison Brody
+
+* Joseph Schall
+
+* Sara Helms Cahan
+
+* Taylor Ricketts

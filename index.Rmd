@@ -8,6 +8,9 @@ output:
     theme: united
 ---
 
+## R Presentation
+* [Script: Working with Spatial Data and using tmap()](SpatialDataTutorial.html)
+
 ##Homework Assignments
 
 * [Assignment 2](Assignment2.html)

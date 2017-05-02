@@ -1,6 +1,8 @@
 ---
-output:
-  beamer_presentation: 
+title: "ReasearchTalk"
+author: "Samantha A. Alger"
+date: "5/1/2017"
+output: beamer_presentation
     colortheme: lily
     incremental: yes
 ---
@@ -20,7 +22,7 @@ output:
 Samantha Alger
 \begin{picture}(320,250)
  \put(-15,90){\includegraphics[height=4cm]
- {/Users/samanthaalger/ComputationalBiology/CompBio/Beamerfigs/Virions.png}}
+ {/Users/samanthaalger/CompBio/Beamerfigs/Virions.png}}
  \put(00,100){\begin{minipage}[t]{1\linewidth}
  {}
  \end{minipage}}
@@ -212,9 +214,6 @@ Can flowers act as bridges in disease transmission?
 - Joseph Schall
 - Sara Helms Cahan
 - Taylor Ricketts
-
-
-
 
  
  

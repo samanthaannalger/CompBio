@@ -60,3 +60,83 @@ north <- sapply(coordinates(lnd)[,2], function(x) x > lng)
 lnd@data$quadrant[east & north] <- "northeast"
 
 # CREATING AND MANIPULATING SPATIAL DATA--------
+
+# create a vector and dataframe
+vec <- vector(mode = "numeric", length = 3)
+df <- data.frame(x = 1:3, y = c(1/2, 2/3, 3/4))
+
+#check the class of these objects:
+class(vec)
+class(df)
+
+# Create a spatial points object with the dataframe:
+sp1 <- SpatialPoints(coords = df)
+
+# spatial points object is one of the fundamental data types for spatial data. 
+# Others: lines, polygons, and pixels and can be created
+# with 'SpatialLines, SpatialPolygons, SpatialPixels etc.'
+
+class(sp1)
+
+# Adding DataFrame allows you to add data from the df... HOW IS THIS DIFFERENT FROM THE ABOVE????
+
+spdf <- SpatialPointsDataFrame(sp1, data = df) class(spdf)
+
+# Projections--------------------
+# CRS = Coordinate Reference System
+
+proj4string(lnd) <- NA_character_ # remove CRS information from lnd 
+
+proj4string(lnd) <- CRS("+init=epsg:27700") # assign a new CRS
+
+EPSG <- make_EPSG() # create data frame of available EPSG codes 
+
+EPSG[grepl("WGS 84$", EPSG$note), ] # search for WGS 84 code
+
+lnd84 <- spTransform(lnd, CRS("+init=epsg:4326")) # reproject
+
+# Save lnd84 object (we will use it in Part IV)
+saveRDS(object = lnd84, file = "data/lnd84.Rds")
+
+rm(lnd84) # remove the lnd object
+# we will load it back in later with readRDS(file = "data/lnd84.Rds")
+
+# Attribute Joins---------------------
+
+library(rgdal) # ensure rgdal is loaded
+
+# Create new object called "lnd" from "london_sport" shapefile 
+lnd <- readOGR(dsn = "data", "london_sport")
+plot(lnd) # plot the lnd object (not shown)
+nrow(lnd) # return the number of rows (not shown)
+
+# Create and look at new crime_data object
+crime_data <- read.csv("data/mps-recordedcrime-borough.csv", stringsAsFactors = FALSE)
+
+head(crime_data$CrimeType) # information about crime type
+
+# Extract "Theft & Handling" crimes and save
+crime_theft <- crime_data[crime_data$CrimeType == "Theft & Handling", ] 
+head(crime_theft, 2) # take a look at the result (replace 2 with 10 to see more rows)
+
+# Calculate the sum of the crime count for each district, save result
+crime_ag <- aggregate(CrimeCount ~ Borough, FUN = sum, data = crime_theft) # Show the first two rows of the aggregated crime data
+head(crime_ag, 2)
+
+# Compare the name column in lnd to Borough column in crime_ag to see which rows match.
+lnd$name %in% crime_ag$Borough
+
+# Return rows which do not match
+lnd$name[!lnd$name %in% crime_ag$Borough]
+
+# Joining the attribute tables to create a map with coded counties for crime rates:
+
+library(dplyr)
+
+head(lnd$name) # dataset to add to (results not shown) 
+head(crime_ag$Borough) # the variables to join
+
+lnd@data <- left_join(lnd@data, crime_ag, by = c('name' = 'Borough'))
+
+library(tmap) # load tmap package (see Section IV) 
+qtm(lnd, "CrimeCount") # plot the basic map
